@@ -52,11 +52,8 @@ html {
     main {
         display: flex;
         flex-direction: column;
-        /* position:static; */
         align-items: center;
         width: 100vw;
-        gap: 100px;
-        /* overflow: auto; */
         scroll-snap-type: y mandatory;
         z-index: 1;
         backdrop-filter: blur(10px);
@@ -66,37 +63,32 @@ html {
         box-shadow: 0px -5px 100px 0px rgb(178, 92, 92);
     }
     main section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 50px 15%;
+        align-items: center;
         scroll-snap-align: center;
+        justify-content: center;
+        color: aliceblue;
         }
         #arrow {
             display: flex;
             position: absolute;
             width: 20px;
-            /* top: 10px; */
-            padding-top: 15px;
+            top: 10px;
             }
     main .frase {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        padding-top: 100px;
         }
         .frase p {
-            width: 70%;
             color: white;
             font-size: 2.3rem;
             text-align: center;
             }
     
     main .regresiva {
-        display: flex;
-        flex-direction: column;
-        width: 70%;
-        align-items: center;
-        padding-top: 100px;
-        align-items: center;
         color: aliceblue;
+        background-color:rgba(194, 136, 136, 0.7);
         }
         .regresiva #title {
             font-size: 4rem;
@@ -138,30 +130,23 @@ html {
             color: aliceblue;
             cursor: pointer;
             box-shadow: 0px 5px 10px 0px rgb(178, 92, 92);
+            /* margin-bottom: 30px; */
             }
 
     main .evento {
-        display: flex;
-        flex-direction: column;
-        width: 70%;
-        align-items: center;
-        padding-top: 100px;
-        color: aliceblue;
         font-size: 1.6rem;
         }
        .evento p:first-child {
             font-size: 2rem;
-            width: 70%;
             text-align: center;
             }
        .evento p:nth-child(2) {
             font-size: 4.5rem;
-            width: 70%;
             text-align: center;
             }
        .evento iframe {
             margin-top: 30px;
-            width: 90%;
+            width: 120%;
             height: 300px;
             border-radius: 12px;
             }
@@ -182,6 +167,35 @@ html {
             }
 
 
+    main .regalo {
+        background-color:rgba(194, 136, 136, 0.7);
+        }
+        .regalo p {
+            display: flex;
+            width: 100%;
+            font-size: 1.6rem;
+            padding: 15px 0;
+            text-align: center;
+            justify-content: center;
+            z-index: 1;
+            }
+        .regalo p:first-child {
+            font-size: 2rem;
+            font-weight: 700;
+            }
+        .regalo .background{
+            display: flex;
+            position: absolute;
+            width: 100%;
+            /* bottom: 0; */
+            z-index: 0;
+            }
+            .regalo .background img {
+                width: 100%;
+                margin-bottom: 42px;
+                opacity: 0.2;
+            }
+
             .header_background {
                 display: flex;
                 position: absolute;
@@ -195,4 +209,4 @@ html {
                     height: 100%;
                     width: auto;
                     margin-top: 0;
-                }
+                    }
