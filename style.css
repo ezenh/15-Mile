@@ -32,7 +32,7 @@ html {
         backdrop-filter: blur(0.6px);
         background-clip: padding-box;
         /* background-color:rgb(222, 184, 135); */
-
+        overflow: hidden;
         z-index: 0;
         }
         header img {
@@ -173,3 +173,19 @@ html {
             cursor: pointer;
             box-shadow: 0px 5px 10px 0px rgb(0,0,0, 0.2);
             }
+
+
+            .header_background {
+                display: flex;
+                position: absolute;
+                height: 100vh;
+                overflow: hidden;
+                z-index: -1;
+                align-items: start;
+                }
+                .header_background video {
+                    display: flex;
+                    height: 100%;
+                    width: auto;
+                    margin-top: 0;
+                }
