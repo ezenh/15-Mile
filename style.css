@@ -78,8 +78,7 @@ html {
             width: 20px;
             top: 10px;
             }
-    main .frase {
-        }
+
         .frase p {
             color: white;
             font-size: 2.3rem;
@@ -169,6 +168,12 @@ html {
 
     main .regalo {
         background-color:rgba(194, 136, 136, 0.7);
+        background-image: url('./assets/images/gifts.png');
+        background-size: 100% ;
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        background-position-x: right;
+
         }
         .regalo p {
             display: flex;
