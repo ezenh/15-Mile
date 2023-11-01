@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Raleway';
     }
 html {
     font-size: 62.5%;
@@ -22,7 +23,8 @@ html {
         }
     a {
         background-color: rgb(248, 137, 161);
-        width: 70%;
+        width: 300px;
+        text-align: center;
         }
 
     header {
@@ -63,7 +65,7 @@ html {
         margin-top: -50px;
         background-color:rgba(219, 162, 162, 0.7);
         box-shadow: 0px -5px 100px 0px rgb(178, 92, 92);
-    }
+        }
     main section {
         display: flex;
         flex-direction: column;
@@ -84,17 +86,18 @@ html {
         .frase p {
             color: white;
             font-size: 2.3rem;
-            text-align: center;
+            text-align: justify;
             }
     
+    main h2 {
+            font-size: 4.5rem;
+            padding-bottom: 30px;
+            text-align: center;
+            }
     main .regresiva {
         color: aliceblue;
         background-color:rgba(194, 136, 136, 0.7);
         }
-        .regresiva #title {
-            font-size: 4.5rem;
-            padding-bottom: 30px;
-            }
         .regresiva .timeLeft {
             display: flex;
             width: 100%;
@@ -139,9 +142,8 @@ html {
             font-size: 2rem;
             text-align: center;
             }
-       .evento p:nth-child(2) {
-            font-size: 4.5rem;
-            text-align: center;
+        .evento h2 {
+            padding-bottom: 0px;
             }
        .evento iframe {
             margin-top: 30px;
@@ -203,28 +205,54 @@ html {
     main .dresscode {
         height: 300px;
         overflow: hidden;
-    }
-    
-        .dresscode p:first-child {
-        font-size: 2rem;
+        background-clip: url("./assets/videos/gold_sparkle.mp4");
+        overflow: hidden;
         }
-        .dresscode p:nth-child(2) {
-            font-size: 4.5rem;
-            }
-        .dresscode div {
+        .dresscode .background {
             display: flex;
             position: absolute;
-            justify-content: space-between;
-            z-index: -1;
+            justify-content: center;
             width: 100%;
             height: 300px;
+            z-index: -1;
             overflow: hidden;
             }
-        .dresscode div img:first-child {
-            /* max-width: 50%; */
-            height: 250%;
-            /* margin-left: -80px; */
+        .dresscode .background video {
+            height: 115%;
             }
+    
+        .dresscode p:first-child {
+            width: 100%;
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            padding-right: 40px;
+            }
+        .dresscode p:nth-child(3) {
+            margin-top: -40px;
+            margin-left: 120px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .dresscode #gala {
+            margin-top: -20px;
+            width: 200px;
+        }
+        .dresscode .iconos {
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            margin-top: 130px;
+            margin-left: 120px;
+            width: 100%;
+            height: 30px;
+            overflow: hidden;
+            }
+            .iconos img {
+                fill: aquamarine;
+                filter: invert(43%) sepia(65%) saturate(1799%) hue-rotate(162deg) brightness(96%) contrast(101%);
+            }
+ 
 
     main .menu {
         background-color:rgba(194, 136, 136, 0.7);

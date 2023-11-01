@@ -20,16 +20,16 @@ var minutosFaltantes = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60))
 var segundosFaltantes = Math.floor((diferencia % (1000 * 60)) / 1000);
 
 // Imprime el resultado solo cuando cambia el minuto
-    console.log("Días faltantes: " + diasFaltantes);
+    // console.log("Días faltantes: " + diasFaltantes);
     document.getElementById("days").innerHTML = diasFaltantes
 
-    console.log("Horas faltantes: " + horasFaltantes);
+    // console.log("Horas faltantes: " + horasFaltantes);
     document.getElementById("hours").innerHTML = horasFaltantes
 
-    console.log("Minutos faltantes: " + minutosFaltantes);
+    // console.log("Minutos faltantes: " + minutosFaltantes);
     document.getElementById("minutes").innerHTML = minutosFaltantes
 
-    console.log("Segundos faltantes: " + segundosFaltantes);
+    // console.log("Segundos faltantes: " + segundosFaltantes);
     document.getElementById("seconds").innerHTML = segundosFaltantes
 
     // Actualiza el valor de los minutos
@@ -44,3 +44,21 @@ var segundosFaltantes = Math.floor((diferencia % (1000 * 60)) / 1000);
 
 // Inicia la función para mostrar el tiempo faltante
 mostrarDiferenciaTiempo();
+
+
+// const fotoGala = document.querySelector(".fotoGala")
+// function changeFotoGala() {
+//   if (fotoGala.id == "mujer" ) {
+//     console.log('esta el de varon')
+//     fotoGala.id = 'varon'
+//     fotoGala.src = "./assets/images/suit.png"
+//   } else {
+//     console.log('esta el de mujer');
+//     fotoGala.id = 'mujer'
+//     fotoGala.src = "./assets/images/dress.png"
+//   }
+//   console.log(fotoGala.src)
+//   }
+
+//   changeFotoGala()
+//   setInterval(changeFotoGala, 8000);
