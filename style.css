@@ -18,8 +18,12 @@ html {
         justify-content: center;
         width: 100%;
         height: fit-content;
-        background-color:rgb(248, 137, 161);
-    }
+        /* background-color:rgb(248, 137, 161); */
+        }
+    a {
+        background-color: rgb(248, 137, 161);
+        width: 70%;
+        }
 
     header {
         display: flex;
@@ -31,7 +35,6 @@ html {
         justify-content: center;
         backdrop-filter: blur(0.6px);
         background-clip: padding-box;
-        /* background-color:rgb(222, 184, 135); */
         overflow: hidden;
         z-index: 0;
         }
@@ -59,7 +62,6 @@ html {
         backdrop-filter: blur(10px);
         margin-top: -50px;
         background-color:rgba(219, 162, 162, 0.7);
-
         box-shadow: 0px -5px 100px 0px rgb(178, 92, 92);
     }
     main section {
@@ -90,7 +92,7 @@ html {
         background-color:rgba(194, 136, 136, 0.7);
         }
         .regresiva #title {
-            font-size: 4rem;
+            font-size: 4.5rem;
             padding-bottom: 30px;
             }
         .regresiva .timeLeft {
@@ -117,12 +119,10 @@ html {
                 }
         .regresiva a {
             display: flex;
-            width: 70%;
             justify-content: center;
             align-items: center;
             margin-top: 30px;
             padding: 20px 0;
-            background-color: coral;
             text-decoration: none;
             font-size: 1.8rem;
             border-radius: 8px;
@@ -151,12 +151,10 @@ html {
             }
         .evento a {
             display: flex;
-            width: 70vw;
             justify-content: center;
             align-items: center;
             margin-top: 30px;
             padding: 20px 0;
-            background-color: coral;
             text-decoration: none;
             font-size: 1.8rem;
             border-radius: 8px;
@@ -185,7 +183,7 @@ html {
             z-index: 1;
             }
         .regalo p:first-child {
-            font-size: 2rem;
+            font-size: 4.5rem;
             font-weight: 700;
             }
         .regalo .background{
@@ -199,8 +197,59 @@ html {
                 width: 100%;
                 margin-bottom: 42px;
                 opacity: 0.2;
+                }
+
+
+    main .dresscode {
+        height: 300px;
+        overflow: hidden;
+    }
+    
+        .dresscode p:first-child {
+        font-size: 2rem;
+        }
+        .dresscode p:nth-child(2) {
+            font-size: 4.5rem;
+            }
+        .dresscode div {
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            z-index: -1;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            }
+        .dresscode div img:first-child {
+            /* max-width: 50%; */
+            height: 250%;
+            /* margin-left: -80px; */
             }
 
+    main .menu {
+        background-color:rgba(194, 136, 136, 0.7);
+        }
+        .menu p {
+            font-size: 1.6rem;
+            text-align: center;
+            }
+        .menu a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            padding: 20px 0;
+            text-decoration: none;
+            font-size: 1.8rem;
+            border-radius: 8px;
+            color: aliceblue;
+            cursor: pointer;
+            box-shadow: 0px 5px 10px 0px rgb(178, 92, 92);
+            }
+        .menu img {
+            margin-top: 40px;
+            width: 100%;
+        }
             .header_background {
                 display: flex;
                 position: absolute;
