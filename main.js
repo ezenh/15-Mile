@@ -46,6 +46,43 @@ var segundosFaltantes = Math.floor((diferencia % (1000 * 60)) / 1000);
 mostrarDiferenciaTiempo();
 
 
+const userPosition = document.getElementById('userPosition');
+
+async function initMap() {
+// --> Verifica si la ubicacion esta habilitada en el dispositivo y, si no lo esta, devuelve error
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+// --> Obtener las coordenadas de la ubicación actual
+
+          userPosition.addEventListener('click', function(event) {
+            latitud = position.coords.latitude;
+            longitud = position.coords.longitude;
+            
+            console.log(longitud)
+            console.log(latitud)
+            userPosition.href = "https://www.google.es/maps/dir/" + latitud + "," + longitud + "/Terrazas+de+San+Jos%C3%A9+Sal%C3%B3n+Bailable,+Presidente+2400,+Av.+Juan+Domingo+Per%C3%B3n,+Yerba+Buena,+Tucum%C3%A1n/@-26.8120634,-65.295557,13z/data=!3m1!4b1!4m18!1m7!3m6!1s0x942242c13b357d5f:0xfb7fce5f1be7ff6c!2sTerrazas+de+San+Jos%C3%A9+Sal%C3%B3n+Bailable!8m2!3d-26.7994286!4d-65.3043288!16s%2Fg%2F11c6_l78wy!4m9!1m1!4e1!1m5!1m1!1s0x942242c13b357d5f:0xfb7fce5f1be7ff6c!2m2!1d-65.3042962!2d-26.7994676!3e0?entry=ttu"
+            console.log(userPosition.href)
+          })
+          }
+    )}}
+initMap()
+
+function verificarScroll() {
+  const main = document.getElementById("rest")
+  var limiteSuperior = main.getBoundingClientRect().top;
+
+  if (limiteSuperior <= 0) {
+    console.log('Llego al borde')
+  } else {
+    console.log('no esta todavia')
+  }
+}
+
+// Agrega un evento de desplazamiento para verificar continuamente
+window.addEventListener('scroll', verificarScroll);
+
+// Verifica el estado inicial
+verificarScroll();
 // const fotoGala = document.querySelector(".fotoGala")
 // function changeFotoGala() {
 //   if (fotoGala.id == "mujer" ) {
