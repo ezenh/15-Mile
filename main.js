@@ -43,9 +43,6 @@ function verificarElementosEnViewport() {
     mileflotante.style.opacity = "1"
     mileflotante.style.animationName = 'probando'
     mileflotante.style.animationDuration = '1s'
-
-
-
    }
   if (limiteInferior == 0){
     // console.log('ya no hay mas')
