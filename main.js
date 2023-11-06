@@ -12,8 +12,8 @@ const giftH2 = document.getElementById("giftH2")
 const dresscodeH2 = document.getElementById("dresscodeH2")
 const menuH2 = document.getElementById("menuH2")
 
-const mileflotante = document.getElementById("mileflotante")
-mileflotante.style.opacity = "0"
+// const mileflotante = document.getElementById("mileflotante")
+// mileflotante.style.opacity = "0"
 
 var scrollItems = document.querySelectorAll('.section');
 
@@ -30,9 +30,9 @@ function verificarElementosEnViewport() {
     phrase.style.opacity = '1'
     arrow.style.rotate = '180deg'
     arrow.style.animationName = 'reverse-rotate'
-    mileflotante.style.opacity = "0"
-    mileflotante.style.animationName = 'probando-reverso'
-    mileflotante.style.animationDuration = '1s'
+    // mileflotante.style.opacity = "0"
+    // mileflotante.style.animationName = 'probando-reverso'
+    // mileflotante.style.animationDuration = '1s'
     }
   if (limiteSuperior == 0) {
     // console.log(limiteSuperior)
@@ -40,9 +40,9 @@ function verificarElementosEnViewport() {
     arrow.style.animationName = 'rotate'
     arrow.style.rotate = '0deg'
     arrow.style.animationDuration = '.5s'
-    mileflotante.style.opacity = "1"
-    mileflotante.style.animationName = 'probando'
-    mileflotante.style.animationDuration = '1s'
+    // mileflotante.style.opacity = "1"
+    // mileflotante.style.animationName = 'probando'
+    // mileflotante.style.animationDuration = '1s'
    }
   if (limiteInferior == 0){
     // console.log('ya no hay mas')

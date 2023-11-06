@@ -556,7 +556,7 @@ main #byepa {
 
 #mileflotante {
     display: flex;
-    position: absolute;
+    position: relative;
     opacity: 0;
     width: 100vw;
     height:30px;
