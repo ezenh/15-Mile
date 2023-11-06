@@ -1,3 +1,89 @@
+//DETECCION DE POSICION DE SECTIONS PARA ANIMACIONES
+const main = document.getElementById("rest")
+
+const arrow = document.getElementById("arrow")
+arrow.style.rotate = '180deg'
+const phrase = document.getElementById("phrase")
+const menu = document.getElementById("menu")
+
+const countdownH2 = document.getElementById("countdownH2")
+const eventH2 = document.getElementById("eventH2")
+const giftH2 = document.getElementById("giftH2")
+const dresscodeH2 = document.getElementById("dresscodeH2")
+const menuH2 = document.getElementById("menuH2")
+
+var scrollItems = document.querySelectorAll('.section');
+
+main.addEventListener('scroll', verificarElementosEnViewport);
+
+function verificarElementosEnViewport() {
+  var limiteSuperior = phrase.getBoundingClientRect().top;
+  var limiteInferior = menu.getBoundingClientRect().bottom;
+
+  if (limiteSuperior > 0) {
+    console.log(limiteSuperior)
+    phrase.style.animationName = 'probando'
+    phrase.style.animationDuration = '.6s'
+    phrase.style.opacity = '1'
+    arrow.style.rotate = '180deg'
+    arrow.style.animationName = 'reverse-rotate'
+
+    }
+  if (limiteSuperior == 0) {
+    console.log(limiteSuperior)
+    console.log('llego al tope')
+    arrow.style.animationName = 'rotate'
+    arrow.style.rotate = '0deg'
+    arrow.style.animationDuration = '.5s'
+
+   }
+  if (limiteInferior == 0){
+    console.log('ya no hay mas')
+  }
+console.log(limiteInferior)
+  // if (limiteSuperior < 0) {
+  //   console.log(limiteSuperior)
+
+  //   arrow.style.rotate = '180deg'
+
+  // }
+  
+    scrollItems.forEach(function (item) {
+      var rect = item.getBoundingClientRect();
+
+      if (rect.top >= 0 && rect.bottom <= main.clientHeight) {
+        // El elemento está dentro del viewport del contenedor
+        console.log('Elemento dentro del viewport:', item.id);
+      }
+    });
+  }
+console.log(window.screen.height)
+
+// //CAMBIO DE POSICION Y TAMAÑO DEL HEADER
+// function verificarScroll() {
+//   var limiteSuperior = main.getBoundingClientRect().top;
+//   console.log(limiteSuperior);
+//   if (limiteSuperior == 0) {
+
+//     console.log('Llego al borde')
+//     countdownH2.style.animationName = 'tracking-in-expand'
+//     countdownH2.style.animationDuration = '1s'
+//     countdownH2.style.animationDelay = '1s'
+
+
+//   } else {
+
+//     console.log('no esta todavia')
+//   }
+// }
+
+// // Agrega un evento de desplazamiento para verificar continuamente
+// window.addEventListener('scroll', verificarScroll);
+
+// // Verifica el estado inicial
+// verificarScroll();
+
+//COUNTDOWN DEL EVENTO
 // Fecha del evento en formato mm/dd/yy
 var fechaEvento = "12/02/23"; // Por ejemplo, 31 de octubre de 2023
 
@@ -45,7 +131,7 @@ var segundosFaltantes = Math.floor((diferencia % (1000 * 60)) / 1000);
 // Inicia la función para mostrar el tiempo faltante
 mostrarDiferenciaTiempo();
 
-
+//IDENTIFICAR POSICION DEL USUARIO
 const userPosition = document.getElementById('userPosition');
 
 async function initMap() {
@@ -67,35 +153,85 @@ async function initMap() {
     )}}
 initMap()
 
-function verificarScroll() {
-  const main = document.getElementById("rest")
-  var limiteSuperior = main.getBoundingClientRect().top;
 
-  if (limiteSuperior <= 0) {
-    console.log('Llego al borde')
-  } else {
-    console.log('no esta todavia')
-  }
+//DETECCION DE BROWSER
+var nVer = navigator.appVersion;
+var nAgt = navigator.userAgent;
+var browserName  = navigator.appName;
+var fullVersion  = ''+parseFloat(navigator.appVersion); 
+var majorVersion = parseInt(navigator.appVersion,10);
+var nameOffset,verOffset,ix;
+
+// In Opera, the true version is after "OPR" or after "Version"
+if ((verOffset=nAgt.indexOf("OPR"))!=-1) {
+ browserName = "Opera";
+ fullVersion = nAgt.substring(verOffset+4);
+ if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+   fullVersion = nAgt.substring(verOffset+8);
+}
+// In MS Edge, the true version is after "Edg" in userAgent
+else if ((verOffset=nAgt.indexOf("Edg"))!=-1) {
+ browserName = "Microsoft Edge";
+ fullVersion = nAgt.substring(verOffset+4);
+}
+// In MSIE, the true version is after "MSIE" in userAgent
+else if ((verOffset=nAgt.indexOf("MSIE"))!=-1) {
+ browserName = "Microsoft Internet Explorer";
+ fullVersion = nAgt.substring(verOffset+5);
+}
+// In Chrome, the true version is after "Chrome" 
+else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) {
+ browserName = "Chrome";
+ fullVersion = nAgt.substring(verOffset+7);
+}
+// In Safari, the true version is after "Safari" or after "Version" 
+else if ((verOffset=nAgt.indexOf("Safari"))!=-1) {
+ browserName = "Safari";
+ fullVersion = nAgt.substring(verOffset+7);
+ if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+   fullVersion = nAgt.substring(verOffset+8);
+}
+// In Firefox, the true version is after "Firefox" 
+else if ((verOffset=nAgt.indexOf("Firefox"))!=-1) {
+ browserName = "Firefox";
+ fullVersion = nAgt.substring(verOffset+8);
+}
+// In most other browsers, "name/version" is at the end of userAgent 
+else if ( (nameOffset=nAgt.lastIndexOf(' ')+1) < 
+          (verOffset=nAgt.lastIndexOf('/')) ) 
+{
+ browserName = nAgt.substring(nameOffset,verOffset);
+ fullVersion = nAgt.substring(verOffset+1);
+ if (browserName.toLowerCase()==browserName.toUpperCase()) {
+  browserName = navigator.appName;
+ }
+}
+// trim the fullVersion string at semicolon/space if present
+if ((ix=fullVersion.indexOf(";"))!=-1)
+   fullVersion=fullVersion.substring(0,ix);
+if ((ix=fullVersion.indexOf(" "))!=-1)
+   fullVersion=fullVersion.substring(0,ix);
+
+majorVersion = parseInt(''+fullVersion,10);
+if (isNaN(majorVersion)) {
+ fullVersion  = ''+parseFloat(navigator.appVersion); 
+ majorVersion = parseInt(navigator.appVersion,10);
 }
 
-// Agrega un evento de desplazamiento para verificar continuamente
-window.addEventListener('scroll', verificarScroll);
+// document.write(''
+//  +'Browser name  = '+browserName+'<br>'
+//  +'Full version  = '+fullVersion+'<br>'
+//  +'Major version = '+majorVersion+'<br>'
+//  +'navigator.appName = '+navigator.appName+'<br>'
+//  +'navigator.userAgent = '+navigator.userAgent+'<br>'
+//)
 
-// Verifica el estado inicial
-verificarScroll();
-// const fotoGala = document.querySelector(".fotoGala")
-// function changeFotoGala() {
-//   if (fotoGala.id == "mujer" ) {
-//     console.log('esta el de varon')
-//     fotoGala.id = 'varon'
-//     fotoGala.src = "./assets/images/suit.png"
-//   } else {
-//     console.log('esta el de mujer');
-//     fotoGala.id = 'mujer'
-//     fotoGala.src = "./assets/images/dress.png"
-//   }
-//   console.log(fotoGala.src)
-//   }
 
-//   changeFotoGala()
-//   setInterval(changeFotoGala, 8000);
+//DETECCION DE OS
+var OSName="Unknown OS";
+if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+
+// document.write('Your OS: '+OSName);
