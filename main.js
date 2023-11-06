@@ -21,7 +21,7 @@ function verificarElementosEnViewport() {
   var limiteInferior = menu.getBoundingClientRect().bottom;
 
   if (limiteSuperior > 0) {
-    console.log(limiteSuperior)
+    // console.log(limiteSuperior)
     phrase.style.animationName = 'probando'
     phrase.style.animationDuration = '.6s'
     phrase.style.opacity = '1'
@@ -30,17 +30,17 @@ function verificarElementosEnViewport() {
 
     }
   if (limiteSuperior == 0) {
-    console.log(limiteSuperior)
-    console.log('llego al tope')
+    // console.log(limiteSuperior)
+    // console.log('llego al tope')
     arrow.style.animationName = 'rotate'
     arrow.style.rotate = '0deg'
     arrow.style.animationDuration = '.5s'
 
    }
   if (limiteInferior == 0){
-    console.log('ya no hay mas')
+    // console.log('ya no hay mas')
   }
-console.log(limiteInferior)
+    // console.log(limiteInferior)
   // if (limiteSuperior < 0) {
   //   console.log(limiteSuperior)
 
@@ -53,11 +53,11 @@ console.log(limiteInferior)
 
       if (rect.top >= 0 && rect.bottom <= main.clientHeight) {
         // El elemento está dentro del viewport del contenedor
-        console.log('Elemento dentro del viewport:', item.id);
+        // console.log('Elemento dentro del viewport:', item.id);
       }
     });
   }
-console.log(window.screen.height)
+// console.log(window.screen.height)
 
 // //CAMBIO DE POSICION Y TAMAÑO DEL HEADER
 // function verificarScroll() {

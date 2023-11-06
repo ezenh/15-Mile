@@ -27,7 +27,7 @@ html {
 }
 @keyframes tracking-in-expand {
     0% {
-      letter-spacing: -0.5em;
+      letter-spacing: 0.5em;
       opacity: 0;
     }
     100% {
@@ -78,6 +78,27 @@ html {
       transform: scale( .75);
     }
   }
+ @keyframes wobble-horizontal-top {
+    0%,100%{
+        transform:translateY(0) rotate(0);
+        transform-origin:50% 50%
+    }
+    15%{
+        transform:translateY(-30px) rotate(6deg)
+    }
+    30%{
+        transform:translateY(15px) rotate(-6deg)
+    }
+    45%{
+        transform:translateY(-15px) rotate(3.6deg)
+    }
+    60%{
+        transform:translateY(9px) rotate(-2.4deg)
+    }
+    75%{
+        transform:translateY(-6px) rotate(1.2deg)
+    }}
+
     body {
         display: flex;
         flex-direction: column;
@@ -293,11 +314,11 @@ html {
 
     main .regalo {
         /* background-color:rgba(194, 136, 136, 0.5); */
-        background-image: url('./assets/images/gifts.png');
-        background-size: 100% ;
-        background-repeat: no-repeat;
-        background-position-y: bottom;
-        background-position-x: right;
+        /* background-image: url('./assets/images/gifts.png'); */
+        /* background-size: 100% ; */
+        /* background-repeat: no-repeat; */
+        /* background-position-y: bottom; */
+        /* background-position-x: right; */
 
         }
         .regalo p {
@@ -313,7 +334,40 @@ html {
             font-size: 4.5rem;
             font-weight: 700;
             }
-        .regalo .background{
+        .regalo div {
+            display: flex;
+            position: absolute;
+            width: 100vw;
+            height: 100%;
+            z-index: -1;
+            margin-top: auto;
+            overflow: hidden;
+            }
+            .regalo div img {
+                width: 100vw;
+                margin-top: auto;
+                animation-name: wobble-horizontal-top;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                }
+                .gift1 {
+                    margin-right: -40px;
+                    margin-bottom: -15px;
+                    animation-delay: 2s;
+                    }
+                .gift2 {
+                    animation-delay: 3s;
+                    }
+                .gift3 {
+                    animation-delay: 1s;
+                    }
+                .gift4 {
+                    animation-delay: 1.5s;
+                    }
+                .gift5 {
+                    animation-delay: 2.3s;
+                    }
+        /* .regalo .background{
             display: flex;
             position: absolute;
             z-index: 0;
@@ -322,7 +376,7 @@ html {
                 width: 100%;
                 margin-bottom: 42px;
                 opacity: 0.2;
-                }
+                } */
 
 
     main .dresscode {
@@ -441,6 +495,7 @@ main #byepa {
     align-items: center;
     justify-content: space-between;
     scroll-snap-align: center;
+    cursor: pointer;
     /* background-color: black; */
 
     }
@@ -478,3 +533,10 @@ main #byepa {
         #wpp img {
             width: 30px;
             }
+#hand {
+    font-size: 2rem;
+    padding-right: 10px;
+    animation-name: tracking-in-expand;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
