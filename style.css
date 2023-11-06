@@ -197,9 +197,8 @@ html {
         scroll-snap-align: center;
         justify-content: center;
         color: aliceblue;
-        backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-
+        backdrop-filter: blur(10px);
         background-color:rgba(219, 162, 162, 0.7);
         }
         main .impar {
@@ -216,9 +215,8 @@ html {
     main #transparent {
         height: calc(100vh - 50px);
         background-color: rgb(0,0,0,0);
-        backdrop-filter: blur(0px);
         -webkit-backdrop-filter: blur(0px);
-
+        backdrop-filter: blur(0px);
         }
         #transparent div {
             display: flex;
@@ -314,6 +312,10 @@ html {
             cursor: pointer;
             box-shadow: 0px 5px 10px 0px rgb(178, 92, 92);
             }
+            #event iframe {
+ 
+                border: 0;
+            }
 
 
     main .regalo {
@@ -351,7 +353,7 @@ html {
                 width: 100vw;
                 margin-top: auto;
                 animation-name: wobble-horizontal-top;
-                animation-duration: 3s;
+                animation-duration: 10s;
                 animation-iteration-count: infinite;
                 }
                 .gift1 {
@@ -472,7 +474,7 @@ html {
             width: 100%;
             max-width: 420px;
             animation-name: heartbeat;
-            animation-duration: 2.5s;
+            /* animation-duration: 20s; */
             animation-iteration-count: infinite;
             }
             .header_background {
