@@ -229,7 +229,6 @@ html {
             position: absolute;
             width: 20px;
             height: 20px;
-            height: fit-content;
             align-self: center;
             bottom: -35px;
             /* animation-direction: reverse; */
