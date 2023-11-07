@@ -224,7 +224,7 @@ html {
             }
     main #transparent {
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-        height: calc(100% - 50px);
+        height: calc(100% - 100px);
         background-color: rgb(0,0,0,0);
         -webkit-backdrop-filter: blur(0px);
         backdrop-filter: blur(0px);
