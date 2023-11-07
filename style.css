@@ -414,11 +414,12 @@ margin: auto;
         .dresscode .background {
             display: flex;
             justify-content: center;
-            z-index: -1;
+            z-index: -2;
             }
         .dresscode .background video {
             width: 100%;
             height: auto;
+            z-index: -1;
             }
 
         .dresscode .text {
@@ -429,6 +430,7 @@ margin: auto;
                 width: 100%;
                 align-items: center;
                 justify-content: center;
+                z-index: 2;
                 }
         .dresscode .text p:first-child {
             width: 100%;
@@ -436,6 +438,7 @@ margin: auto;
             font-weight: 600;
             text-align: center;
             padding-right: 40px;
+            z-index: 2;
             }
         .dresscode .text p:nth-child(5) {
             /* width: 100%; */
@@ -443,11 +446,13 @@ margin: auto;
             margin-left: 120px;
             font-size: 1.3rem;
             font-weight: 600;
+            z-index: 2;
         }
         .dresscode .text #gala {
             margin-top: -20px;
             width: 200px;
             height: fit-content;
+            z-index: 2;
         }
         .dresscode .text .iconos {
             display: flex;
