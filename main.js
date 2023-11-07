@@ -151,7 +151,7 @@ var segundosFaltantes = Math.floor((diferencia % (1000 * 60)) / 1000);
  actualizarTiempo();
 
  // Configura un temporizador para actualizar el tiempo cada minuto (60000 milisegundos)
- setInterval(actualizarTiempo, 1000);
+setInterval(actualizarTiempo, 1000);
 }
 
 // Inicia la función para mostrar el tiempo faltante
