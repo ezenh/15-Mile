@@ -115,7 +115,6 @@ html {
         width: 100%;
         min-width: 360px;
         max-width: 600px;
-        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
         height: 100vh;
         background-color: rgba(219, 162, 162, 0.7);
         }
@@ -132,7 +131,6 @@ html {
         top: 0;
         width: 100vw;
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-        height: calc(var(--vh, 1vh) * 100);
         min-width: 360px;
         max-width: 600px;
         align-items: center;
@@ -226,7 +224,7 @@ html {
             }
     main #transparent {
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-        height: calc((var(--vh, 1vh) * 100) - 50px);
+        height: calc(100% - 50px);
         background-color: rgb(0,0,0,0);
         -webkit-backdrop-filter: blur(0px);
         backdrop-filter: blur(0px);
