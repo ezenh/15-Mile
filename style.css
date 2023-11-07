@@ -172,14 +172,14 @@ margin: auto;
         #small {
             animation-duration: 2.3s;
             animation-delay: .4s;
-            margin-top: 47px;
-            margin-left: 140px;
+            margin-top: 60px;
+            margin-left: 185px;
             }
         #big {
             animation-duration: 1.7s;
             animation-delay: 1.5s;
-            margin-left: -105px;
-            margin-bottom: 17px;
+            margin-left: -130px;
+            margin-bottom: 25px;
             }
 
         #small-gala{
