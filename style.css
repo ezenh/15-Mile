@@ -109,13 +109,13 @@ html {
 }
 @keyframes rebote {
     0% {
-        bottom: calc(var(--vh, 1vh) * 10)
+        bottom: calc(var(--vh, 1vh) * 5)
     }
     50% {
-        bottom: calc(var(--vh, 1vh) * 15)
+        bottom: calc(var(--vh, 1vh) * 7)
     }
     100% {
-        bottom: calc(var(--vh, 1vh) * 10)
+        bottom: calc(var(--vh, 1vh) * 5)
     }
 }
     body {
@@ -205,7 +205,7 @@ html {
         min-width: 360px;
         max-width: 600px;
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-        /* height: calc(var(--vh, 1vh) * 100); */
+        height: calc(var(--vh, 1vh) * 100);
         z-index: 1;
         }
     main section {
@@ -252,7 +252,7 @@ html {
             width: 20px;
             height: 20px;
             align-self: center;
-            bottom: calc(var(--vh, 1vh) * 10);
+            bottom: calc(var(--vh, 1vh) * 5);
             animation-name: rebote;
             animation-duration: 1s;
             animation-iteration-count: infinite;
