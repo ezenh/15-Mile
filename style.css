@@ -107,7 +107,17 @@ html {
         transform:translateY(-6px) rotate(1.2deg)
     }
 }
-
+@keyframes rebote {
+    0% {
+        bottom: 70px
+    }
+    50% {
+        bottom: 110px;
+    }
+    100% {
+        bottom: 70px;
+    }
+}
     body {
         display: flex;
         flex-direction: column;
@@ -224,7 +234,6 @@ html {
             }
     main #transparent {
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-        height: calc(100% - 100px);
         background-color: rgb(0,0,0,0);
         -webkit-backdrop-filter: blur(0px);
         backdrop-filter: blur(0px);
@@ -242,8 +251,10 @@ html {
             width: 20px;
             height: 20px;
             align-self: center;
-            bottom: -35px;
-            /* animation-direction: reverse; */
+            bottom: 70px;
+            animation-name: rebote;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
             }
     main .frase {
         opacity: 0;

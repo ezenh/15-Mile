@@ -47,32 +47,19 @@ function verificarElementosEnViewport() {
     phrase.style.animationName = 'probando'
     phrase.style.animationDuration = '.6s'
     phrase.style.opacity = '1'
-    arrow.style.rotate = '180deg'
-    arrow.style.animationName = 'reverse-rotate'
-    // mileflotante.style.opacity = "0"
-    // mileflotante.style.animationName = 'probando-reverso'
-    // mileflotante.style.animationDuration = '1s'
+    // arrow.style.rotate = '180deg'
+    // arrow.style.animationName = 'reverse-rotate'
+
     }
   if (limiteSuperior == 0) {
     // console.log(limiteSuperior)
     // console.log('llego al tope')
-    arrow.style.animationName = 'rotate'
-    arrow.style.rotate = '0deg'
-    arrow.style.animationDuration = '.5s'
-    // mileflotante.style.opacity = "1"
-    // mileflotante.style.animationName = 'probando'
-    // mileflotante.style.animationDuration = '1s'
+    // arrow.style.animationName = 'rotate'
+    // arrow.style.rotate = '0deg'
+    // arrow.style.animationDuration = '.5s'
+
    }
-  if (limiteInferior == 0){
-    // console.log('ya no hay mas')
-  }
-    // console.log(limiteInferior)
-  // if (limiteSuperior < 0) {
-  //   console.log(limiteSuperior)
 
-  //   arrow.style.rotate = '180deg'
-
-  // }
   
     scrollItems.forEach(function (item) {
       var rect = item.getBoundingClientRect();
