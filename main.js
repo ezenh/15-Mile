@@ -1,3 +1,12 @@
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+  // We execute the same script as before
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
 //DETECCION DE POSICION DE SECTIONS PARA ANIMACIONES
 const main = document.getElementById("rest")
 
@@ -15,15 +24,15 @@ const menuH2 = document.getElementById("menuH2")
 // const mileflotante = document.getElementById("mileflotante")
 // mileflotante.style.opacity = "0"
 
-function ajustarAlturaDeElementos() {
-  var alturaDelViewport = window.innerHeight;
-  main.style.height = alturaDelViewport;
-  console.log(alturaDelViewport)
+// function ajustarAlturaDeElementos() {
+//   var alturaDelViewport = window.innerHeight;
+//   main.style.height = alturaDelViewport;
+//   console.log(alturaDelViewport)
 
-  // Ajusta tus elementos con respecto a la altura del viewport aquí
-}
-window.addEventListener('load', ajustarAlturaDeElementos);
-window.addEventListener('resize', ajustarAlturaDeElementos);
+//   // Ajusta tus elementos con respecto a la altura del viewport aquí
+// }
+// window.addEventListener('load', ajustarAlturaDeElementos);
+// window.addEventListener('resize', ajustarAlturaDeElementos);
 
 var scrollItems = document.querySelectorAll('.section');
 
