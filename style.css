@@ -122,12 +122,12 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 100%;
+        width: 100vw;
         min-width: 360px;
         max-width: 600px;
         height: 100vh;
         height: calc(var(--vh, 1vh) * 100);
-
+margin: auto;
         background-color: rgba(219, 162, 162, 0.7);
         }
     a {
@@ -407,7 +407,7 @@ html {
     main .dresscode {
         min-height: 300px;
         max-height: 300px;
-        overflow-x: hidden;
+        overflow: hidden;
         padding: 0;
         }
 
@@ -417,7 +417,8 @@ html {
             z-index: -1;
             }
         .dresscode .background video {
-            height: 300px;
+            width: 100%;
+            height: auto;
             }
 
         .dresscode .text {
