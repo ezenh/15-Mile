@@ -127,7 +127,7 @@ html {
         max-width: 600px;
         height: 100vh;
         height: calc(var(--vh, 1vh) * 100);
-margin: auto;
+        margin: auto;
         background-color: rgba(219, 162, 162, 0.7);
         }
     a {
@@ -187,15 +187,15 @@ margin: auto;
             animation-duration: 2.3s;
             animation-delay: .4s;
             margin-top: 15px;
-            margin-left: 168px;
+            margin-left: 160px;
             z-index: 3;
             }
         #big-gala {
             width: 70px;
             animation-duration: 1.7s;
             animation-delay: 1.5s;
-            margin-left: -35px;
-            margin-bottom: 37px;
+            margin-left: -49px;
+            margin-bottom: 17px;
             z-index: 3;
             }
     main {
@@ -411,7 +411,9 @@ margin: auto;
         max-height: 500px;
         overflow: hidden;
         background-image: url('./assets/images/pink-glitter.gif');
+        background-image: url('./assets/images/gold-sparkle.gif');
         background-size:cover;
+        background-position: center;
         padding: 0;
         }
 
