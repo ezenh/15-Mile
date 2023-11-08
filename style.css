@@ -186,7 +186,7 @@ margin: auto;
             width: 90px;
             animation-duration: 2.3s;
             animation-delay: .4s;
-            margin-top: 5px;
+            margin-top: 15px;
             margin-left: 168px;
             z-index: 3;
             }
@@ -428,22 +428,21 @@ margin: auto;
             z-index: 2;
             }
         .dresscode .text p:first-child {
-            position: absolute;
             width: 100%;
             text-align: center;
             font-size: 2rem;
             font-weight: 600;
-            margin-bottom: 170px;
-            margin-right: 60px;
+            margin-bottom: -20px;
+            padding-right: 60px;
             z-index: 2;
 
             }
         .dresscode .text p:nth-child(5) {
-            position: absolute;
+            width: 100%;
             text-align: center;
             font-size: 1.3rem;
             font-weight: 600;
-            margin-top: 120px;
+            margin-top: -50px;
             padding-left: 100px;
             z-index: 2;
         }
