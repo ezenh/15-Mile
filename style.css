@@ -188,6 +188,7 @@ margin: auto;
             animation-delay: .4s;
             margin-top: 5px;
             margin-left: 168px;
+            z-index: 3;
             }
         #big-gala {
             width: 70px;
@@ -195,6 +196,7 @@ margin: auto;
             animation-delay: 1.5s;
             margin-left: -35px;
             margin-bottom: 37px;
+            z-index: 3;
             }
     main {
         display: flex;
@@ -415,15 +417,15 @@ margin: auto;
 
         .dresscode .text {
             display: flex;
-            position: absolute;
+            /* position: absolute; */
+
             flex-direction: column;
             height: 300px;
             width: 100%;
             align-items: center;
-            margin-bottom: 100px;
+            padding-top: 50px;
             justify-content: center;
             z-index: 2;
-
             }
         .dresscode .text p:first-child {
             position: absolute;
@@ -460,18 +462,18 @@ margin: auto;
             z-index: 2;
 
             }
-        #dresscode .background {
+        /* #dresscode .background {
             display: flex;
             position: absolute;
             justify-content: center;
-            /* z-index: -2; */
+            z-index: -2;
 
             width: 100%;
             height: 100%;
             z-index: -3;
             filter: grayscale(0%);
-            /* opacity: 20%; */
-            }
+            opacity: 20%;
+            } */
 
     main .menu img:nth-child(3) {
             width: 50px;
