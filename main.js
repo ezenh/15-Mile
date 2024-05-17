@@ -248,3 +248,16 @@ if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
 if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
 
 // document.write('Your OS: '+OSName);
+
+
+// HIDE SENSITIVE INFO ON EPA WEBSITE
+window.addEventListener('message', (event) => {
+  if (event.data.action === 'hideSensitiveInfo') {
+      // Ocultar o cambiar contenido sensible aquí
+      const client_bank_account = document.getElementsByClassName('client_bank_account');
+      if (client_bank_account) {
+        console.log(client_bank_account)
+        client_bank_account.textContent = 'CBU/CVU/ALIAS';
+      }
+  }
+});
